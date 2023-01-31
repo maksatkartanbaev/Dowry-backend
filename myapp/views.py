@@ -12,6 +12,6 @@ class DowryView(APIView):
         education_weight = EducationValues.objects.get(education=request.data['education'])
         place_of_birth_weight = PlaceValues.objects.get(place=request.data['place_of_birth'])
 
-        price = age_weight.value + weight_weight.value + education_weight.value + place_of_birth_weight.value
+        price = place_of_birth_weight.value * age_weight.value * weight_weight.value * education_weight.value
 
         return Response({'price': price})
