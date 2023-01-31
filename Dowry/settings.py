@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'Dowry.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'dowry',
+        'NAME': 'dowry_db',
     }
 }
 
